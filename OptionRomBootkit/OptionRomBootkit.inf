@@ -1,0 +1,40 @@
+[Defines]
+  INF_VERSION                    = 1.25
+  BASE_NAME                      = OptionRomBootkit
+  FILE_GUID                      = 03615e38-b10c-424f-a383-1a0ae10717ff
+  MODULE_TYPE                    = UEFI_DRIVER
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = OptionRomEntrypoint
+
+[Sources]
+  OptionRomBootkit.c
+  FsOps.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  MdeModulePkg/MdeModulePkg.dec
+  
+[LibraryClasses]
+  UefiDriverEntryPoint
+  DevicePathLib
+  UefiLib
+  BaseLib
+  DebugLib
+  PrintLib
+  MemoryAllocationLib
+  BaseMemoryLib
+  UefiBootServicesTableLib
+
+[Guids]
+  gEfiFileInfoGuid
+
+[Ppis]
+
+[Protocols]
+  gEfiPciIoProtocolGuid
+  gEfiSimpleFileSystemProtocolGuid
+  
+
+[FeaturePcd]
+
+[Pcd]
